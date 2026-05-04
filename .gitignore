@@ -1,2 +1,5 @@
-/.obsidian
-/.git
+.obsidian/
+.git/
+
+[safe]
+directory = *
