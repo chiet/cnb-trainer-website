@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@layer base {
+  :root {
+    /* Warm coffee + keyboard palette */
+    --background: 36 33% 96%;
+    --foreground: 25 35% 12%;
+
+    --card: 36 40% 99%;
+    --card-foreground: 25 35% 12%;
+
+    --popover: 36 40% 99%;
+    --popover-foreground: 25 35% 12%;
+
+    /* Espresso */
+    --primary: 22 45% 18%;
+    --primary-foreground: 36 40% 97%;
+
+    /* Cream */
+    --secondary: 34 35% 90%;
+    --secondary-foreground: 22 45% 18%;
+
+    --muted: 34 25% 92%;
+    --muted-foreground: 25 15% 38%;
+
+    /* Amber accent */
+    --accent: 28 85% 55%;
+    --accent-foreground: 25 35% 12%;
+
+    /* Brewed copper */
+    --copper: 18 65% 45%;
+    --copper-foreground: 36 40% 97%;
+
+    /* Keyboard teal */
+    --keycap: 178 45% 38%;
+    --keycap-foreground: 36 40% 97%;
+
+    --destructive: 0 70% 45%;
+    --destructive-foreground: 36 40% 97%;
+
+    --border: 30 20% 86%;
+    --input: 30 20% 86%;
+    --ring: 28 85% 55%;
+
+    --radius: 0.75rem;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(22 45% 18%) 0%, hsl(18 50% 28%) 50%, hsl(28 60% 40%) 100%);
+    --gradient-amber: linear-gradient(135deg, hsl(28 85% 55%), hsl(18 75% 50%));
+    --gradient-cream: linear-gradient(180deg, hsl(36 33% 96%) 0%, hsl(34 35% 90%) 100%);
+
+    /* Shadows */
+    --shadow-key: 0 4px 0 hsl(22 45% 18% / 0.85), 0 6px 12px hsl(22 45% 18% / 0.25);
+    --shadow-key-pressed: 0 1px 0 hsl(22 45% 18% / 0.85), 0 2px 4px hsl(22 45% 18% / 0.2);
+    --shadow-soft: 0 8px 32px -8px hsl(22 45% 18% / 0.18);
+    --shadow-glow: 0 0 40px hsl(28 85% 55% / 0.35);
+
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@layer base {
+  * { @apply border-border; }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-feature-settings: "ss01", "cv11";
+  }
+  h1, h2, h3, h4 { @apply font-display tracking-tight; }
+}
+
+@layer components {
+  /* Mechanical keycap */
+  .keycap {
+    @apply relative inline-flex items-center justify-center font-mono font-semibold;
+    @apply bg-card text-foreground border border-border rounded-md;
+    box-shadow: var(--shadow-key);
+    transition: var(--transition-smooth);
+  }
+  .keycap:hover {
+    transform: translateY(2px);
+    box-shadow: var(--shadow-key-pressed);
+  }
+  .keycap-pressed {
+    transform: translateY(3px);
+    box-shadow: var(--shadow-key-pressed);
+  }
+
+  .grain {
+    background-image:
+      radial-gradient(hsl(22 45% 18% / 0.04) 1px, transparent 1px),
+      radial-gradient(hsl(22 45% 18% / 0.03) 1px, transparent 1px);
+    background-size: 24px 24px, 16px 16px;
+    background-position: 0 0, 8px 8px;
+  }
+}

@@ -1,2 +1,3 @@
-# cnb-trainer-website
-for training and testing
+# Welcome to your Lovable project
+
+TODO: Document your project here
