@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "test.md",
+                "file": "Changelogs.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "test"
+              "title": "Changelogs"
             }
           }
         ]
@@ -73,7 +73,7 @@
   "active": "d40a94433253ff6d",
   "lastOpenFiles": [
     "Untitled.md",
-    "test.md",
+    "Changelogs.md",
     "New Microsoft PowerPoint Presentation.pptx",
     "README.md"
   ]

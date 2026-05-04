@@ -1,0 +1,3 @@
+- Add .gitignore
+- Delete .obsidian
+- 
